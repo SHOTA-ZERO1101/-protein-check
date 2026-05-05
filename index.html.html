@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プロテイン味診断｜細かい版</title>
+<style>
+:root{--main:#d66a5e;--sub:#fff4f1;--line:#eaded6;--bg:#f8f3ee;--txt:#222;--muted:#666}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;background:linear-gradient(#fff,var(--bg));color:var(--txt)}
+.wrap{max-width:820px;margin:auto;padding:28px 16px 56px}
+.hero{text-align:center;margin-bottom:18px}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--main);font-weight:800;background:#fff}
+h1{font-size:34px;margin:14px 0 6px}
+p{line-height:1.8}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;margin:16px 0;box-shadow:0 10px 26px rgba(80,50,30,.08)}
+.q{display:none}
+#start:target,#q2sweet:target,#q2fresh:target,#q3dessert:target,#q3japan:target,#q3mild:target,#q3fruit:target,#q3bitter:target,#q3unique:target,
+#A:target,#B:target,#C:target,#D:target,#E:target,#F:target,#G:target,#H:target,#I:target,#J:target,#K:target,#L:target{display:block}
+body:not(:has(:target)) #start{display:block}
+.qno{color:var(--main);font-weight:900;font-size:14px;letter-spacing:.08em}
+.question{font-size:24px;font-weight:900;line-height:1.5;margin:8px 0 18px}
+.btns{display:grid;gap:12px}
+a.btn{display:block;text-align:center;text-decoration:none;border-radius:16px;padding:16px 18px;font-weight:900;font-size:17px;border:2px solid var(--line);color:var(--txt);background:#fff}
+a.main{background:var(--main);border-color:var(--main);color:#fff}
+a.sub{background:var(--sub);border-color:#f0c4bd}
+a.back{font-size:14px;padding:12px;background:#fafafa}
+.result h2{font-size:28px;margin:0 0 8px;line-height:1.35}
+.letter{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:16px;background:var(--main);color:#fff;font-size:32px;margin-right:10px}
+.tag{display:inline-block;background:var(--sub);border:1px solid #f0c4bd;color:#9e433a;font-weight:800;border-radius:999px;padding:7px 10px;margin:5px 5px 0 0}
+.small{color:var(--muted);font-size:14px}
+.copy{background:#fbf7f3;border:1px dashed #d9c4b8;border-radius:14px;padding:14px;line-height:1.8}
+.footer{text-align:center;color:#888;font-size:12px;margin-top:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}h1{font-size:28px}.question{font-size:21px}.card{padding:20px}}
+@supports not selector(:has(*)){body:not(.x) #start{display:block}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="badge">12タイプ診断｜どのブランドでも使える</div>
+    <h1>プロテイン味診断</h1>
+    <p class="small">味の好み・割り方・飲むタイミングまで考えた、少し細かいバージョンです。</p>
+  </div>
+
+  <section id="start" class="card q">
+    <div class="qno">QUESTION 1</div>
+    <div class="question">プロテインに求めるのはどっち？</div>
+    <div class="btns">
+      <a class="btn main" href="#q2sweet">甘さ・デザート感</a>
+      <a class="btn sub" href="#q2fresh">さっぱり・飲みやすさ</a>
+    </div>
+  </section>
+
+  <section id="q2sweet" class="card q">
+    <div class="qno">QUESTION 2</div>
+    <div class="question">甘い系なら、どっちが近い？</div>
+    <div class="btns">
+      <a class="btn main" href="#q3dessert">しっかり甘い・満足感がほしい</a>
+      <a class="btn sub" href="#q3mild">甘いけど重すぎない方がいい</a>
+      <a class="btn back" href="#start">戻る</a>
+    </div>
+  </section>
+
+  <section id="q3dessert" class="card q">
+    <div class="qno">QUESTION 3</div>
+    <div class="question">一番好きな方向性は？</div>
+    <div class="grid2">
+      <a class="btn main" href="#A">チョコ・ココア系</a>
+      <a class="btn main" href="#B">バニラ・キャラメル系</a>
+      <a class="btn sub" href="#C">クッキー・プリン系</a>
+      <a class="btn sub" href="#q3japan">和スイーツ系</a>
+    </div>
+    <div class="btns" style="margin-top:10px"><a class="btn back" href="#q2sweet">戻る</a></div>
+  </section>
+
+  <section id="q3japan" class="card q">
+    <div class="qno">QUESTION 4</div>
+    <div class="question">和スイーツならどっち？</div>
+    <div class="btns">
+      <a class="btn main" href="#D">抹茶・ほうじ茶などお茶系</a>
+      <a class="btn sub" href="#E">きなこ・黒ごま・あずき系</a>
+      <a class="btn back" href="#q3dessert">戻る</a>
+    </div>
+  </section>
+
+  <section id="q3mild" class="card q">
+    <div class="qno">QUESTION 3</div>
+    <div class="question">毎日飲むならどっちが続きそう？</div>
+    <div class="btns">
+      <a class="btn main" href="#F">ミルクティー・カフェラテ系</a>
+      <a class="btn sub" href="#G">ヨーグルト・杏仁・レモンミルク系</a>
+      <a class="btn back" href="#q2sweet">戻る</a>
+    </div>
+  </section>
+
+  <section id="q2fresh" class="card q">
+    <div class="qno">QUESTION 2</div>
+    <div class="question">さっぱり系なら、どっちが近い？</div>
+    <div class="btns">
+      <a class="btn main" href="#q3fruit">フルーツ系が好き</a>
+      <a class="btn sub" href="#q3bitter">コーヒー・お茶・ビター系が好き</a>
+      <a class="btn sub" href="#q3unique">定番以外も試したい</a>
+      <a class="btn back" href="#start">戻る</a>
+    </div>
+  </section>
+
+  <section id="q3fruit" class="card q">
+    <div class="qno">QUESTION 3</div>
+    <div class="question">フルーツ系ならどっち？</div>
+    <div class="btns">
+      <a class="btn main" href="#H">酸味・爽快感がほしい</a>
+      <a class="btn sub" href="#I">酸味より甘め・ミルキーがいい</a>
+      <a class="btn back" href="#q2fresh">戻る</a>
+    </div>
+  </section>
+
+  <section id="q3bitter" class="card q">
+    <div class="qno">QUESTION 3</div>
+    <div class="question">ビター系ならどっち？</div>
+    <div class="btns">
+      <a class="btn main" href="#J">コーヒー・カフェラテ系</a>
+      <a class="btn sub" href="#K">カカオ・ビターショコラ系</a>
+      <a class="btn back" href="#q2fresh">戻る</a>
+    </div>
+  </section>
+
+  <section id="q3unique" class="card q">
+    <div class="qno">QUESTION 3</div>
+    <div class="question">変わり種ならどっち？</div>
+    <div class="btns">
+      <a class="btn main" href="#L">ラムネ・ソーダ・チョコミント系</a>
+      <a class="btn sub" href="#L">スープ・季節限定・ネタ系</a>
+      <a class="btn back" href="#q2fresh">戻る</a>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="A" class="card q result"><h2><span class="letter">A</span>濃厚チョコタイプ</h2><p>甘さと満足感を一番重視するタイプ。間食代わり、甘い物対策に使いやすいです。</p><b>おすすめ味</b><br><span class="tag">チョコ</span><span class="tag">ココア</span><span class="tag">チョコブラウニー</span><span class="tag">チョコバナナ</span><p class="copy">甘党ならまずはチョコ・ココア系が一番無難です。間食代わりにも使いやすいです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="B" class="card q result"><h2><span class="letter">B</span>ミルキー甘党タイプ</h2><p>チョコよりもミルク感ややさしい甘さが好きなタイプ。牛乳割りと相性がいいです。</p><b>おすすめ味</b><br><span class="tag">バニラ</span><span class="tag">キャラメル</span><span class="tag">ミルク</span><span class="tag">練乳系</span><p class="copy">チョコほど重くしたくない甘党なら、バニラ・キャラメル系がおすすめです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="C" class="card q result"><h2><span class="letter">C</span>デザート再現タイプ</h2><p>飲み物というよりスイーツっぽさを楽しみたいタイプ。満足感重視で飽き防止にも使えます。</p><b>おすすめ味</b><br><span class="tag">クッキー</span><span class="tag">プリン</span><span class="tag">チーズケーキ</span><span class="tag">ティラミス</span><p class="copy">デザート感を楽しみたいなら、クッキー・プリン・チーズケーキ系が合いやすいです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="D" class="card q result"><h2><span class="letter">D</span>お茶ラテタイプ</h2><p>甘さはあるけど上品で落ち着いた味が好きなタイプ。女性にも案内しやすいです。</p><b>おすすめ味</b><br><span class="tag">抹茶</span><span class="tag">ほうじ茶</span><span class="tag">抹茶ラテ</span><span class="tag">紅茶</span><p class="copy">和菓子やお茶が好きなら、抹茶・ほうじ茶・紅茶系がおすすめです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="E" class="card q result"><h2><span class="letter">E</span>和素材スイーツタイプ</h2><p>香ばしさや素材感が好きなタイプ。甘すぎず、落ち着いた味で続けやすいです。</p><b>おすすめ味</b><br><span class="tag">きなこ</span><span class="tag">黒ごま</span><span class="tag">あずき</span><span class="tag">黒蜜</span><p class="copy">和素材が好きなら、きなこ・黒ごま・あずき系が合いやすいです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="F" class="card q result"><h2><span class="letter">F</span>毎日ミルクティータイプ</h2><p>甘すぎず、毎日飲みやすいタイプ。朝や仕事中にも合わせやすいです。</p><b>おすすめ味</b><br><span class="tag">ミルクティー</span><span class="tag">カフェラテ</span><span class="tag">ロイヤルミルクティー</span><span class="tag">チャイ</span><p class="copy">毎日続けるなら、ミルクティー・カフェラテ系がかなり使いやすいです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="G" class="card q result"><h2><span class="letter">G</span>やさしい乳酸系タイプ</h2><p>甘さ控えめで、少し爽やかな後味が好きなタイプ。重い甘さが苦手な人に向いています。</p><b>おすすめ味</b><br><span class="tag">ヨーグルト</span><span class="tag">レモンヨーグルト</span><span class="tag">杏仁</span><span class="tag">ピーチヨーグルト</span><p class="copy">甘さ控えめで軽く飲みたいなら、ヨーグルト・杏仁系がおすすめです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="H" class="card q result"><h2><span class="letter">H</span>酸味フルーツタイプ</h2><p>水割りでスッキリ飲みたいタイプ。トレーニング後や暑い時期に向いています。</p><b>おすすめ味</b><br><span class="tag">レモン</span><span class="tag">グレープフルーツ</span><span class="tag">キウイ</span><span class="tag">オレンジ</span><p class="copy">水で飲むなら、レモン・グレープフルーツ・キウイ系がかなりおすすめです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="I" class="card q result"><h2><span class="letter">I</span>フルーツミルクタイプ</h2><p>初心者に一番すすめやすい万能タイプ。甘さ・飲みやすさ・親しみやすさのバランスがいいです。</p><b>おすすめ味</b><br><span class="tag">いちごミルク</span><span class="tag">バナナ</span><span class="tag">桃</span><span class="tag">マンゴー</span><p class="copy">迷ったらフルーツミルク系が一番外しにくいです。初心者にもおすすめです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="J" class="card q result"><h2><span class="letter">J</span>カフェドリンクタイプ</h2><p>甘さより香りや飲みやすさを重視するタイプ。朝や仕事前にも合わせやすいです。</p><b>おすすめ味</b><br><span class="tag">コーヒー</span><span class="tag">カフェオレ</span><span class="tag">カプチーノ</span><span class="tag">ラテ</span><p class="copy">コーヒー系が好きなら、カフェオレ・ラテ系が飽きにくくておすすめです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="K" class="card q result"><h2><span class="letter">K</span>ビターカカオタイプ</h2><p>甘いチョコより、苦みやコクを楽しみたいタイプ。男性や甘いのが苦手な人にも案内しやすいです。</p><b>おすすめ味</b><br><span class="tag">ビターショコラ</span><span class="tag">カカオ</span><span class="tag">ダークチョコ</span><span class="tag">モカ</span><p class="copy">甘すぎるのが苦手なら、ビターショコラ・カカオ系が合いやすいです。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+  <section id="L" class="card q result"><h2><span class="letter">L</span>個性派・変化球タイプ</h2><p>定番に飽きた人、新しい味を試したい人向け。好みは分かれるので少量からがおすすめです。</p><b>おすすめ味</b><br><span class="tag">チョコミント</span><span class="tag">ラムネ</span><span class="tag">ソーダ</span><span class="tag">スープ系</span><span class="tag">季節限定</span><p class="copy">定番に飽きた方なら、チョコミント・ラムネ・スープ系など変わり種もありです。まずは少量が安全です。</p><a class="btn main" href="#start">もう一度診断する</a></section>
+
+  <div class="footer">※商品名ではなく、味の系統で選ぶための簡易診断です。</div>
+</div>
+</body>
+</html>
